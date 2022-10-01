@@ -1,0 +1,1617 @@
+@font-face {
+  font-family: "Muller";
+  src: url("fonts/MullerRegular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Muller-bold";
+  src: url("fonts/MullerBold.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("fonts/Montserrat-Regular.ttf");
+  font-display: swap;
+}
+/* Указываем box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.tel__fixed {
+  position: fixed;
+  bottom: 5%;
+  left: 3%;
+  z-index: 99;
+  width: 70px;
+  height: auto;
+}
+
+/* header  */
+
+.header__nav {
+  max-width: 1300px;
+}
+
+.en {
+  margin-left: 10px;
+}
+
+.header {
+  background-image: url(img/header_bg.webp);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 60px;
+  padding-left: 80px;
+  min-height: 713px;
+}
+
+.tel {
+  background: #fec52e;
+  border: 1px solid #ffc700;
+  border-radius: 9px;
+  padding: 8px 25px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  color: #000000;
+  text-align: center;
+}
+
+.tel:hover {
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.header__nav__ul li:first-child {
+  margin-left: 50px;
+}
+
+.header__nav__ul li a {
+  margin-left: 44px;
+
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000000;
+}
+
+.header__nav__ul li a:hover {
+  text-decoration: none;
+  color: #ffbe00;
+}
+
+.header__body h1 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 44px;
+  align-items: center;
+
+  color: #000000;
+  margin-top: 76px;
+  max-width: 600px;
+  width: 100%;
+}
+
+.header__body h2 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+  display: flex;
+  align-items: center;
+
+  color: #ffbe00;
+}
+
+.header__body h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 250;
+  font-size: 50px;
+  line-height: 56px;
+
+  color: #000000;
+}
+
+.header__body h3 span {
+  font-family: "Muller-bold";
+  font-weight: 500;
+  line-height: 112%;
+
+  color: #000000;
+}
+
+.header__body p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+
+  margin-top: 32px;
+}
+
+.header__body a {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: #000000;
+
+  display: inline-block;
+  background: #ffbe00;
+  border: 1px solid #ffc700;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  margin-top: 31px;
+  padding: 18px 28px 16px 28px;
+}
+
+.header__body a:hover {
+  text-decoration: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+.social__header {
+  margin-top: 0 !important;
+}
+
+.lang {
+  margin-left: 10%;
+}
+
+.lang a:hover {
+  color: #9a7800 !important;
+}
+
+.social__header {
+  margin-left: 10px;
+}
+
+/* advantages */
+
+.advantages {
+  position: relative;
+  padding: 50px 0;
+}
+
+.left__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -5;
+}
+
+.advantages h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 46px;
+  line-height: 130%;
+  text-align: center;
+
+  color: #1e212c;
+  margin-bottom: 34px;
+}
+
+.advantages__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+.advantages__card {
+  background: #fff;
+  box-shadow: 0px 4px 32px rgba(34, 34, 34, 0.24);
+
+  border-radius: 17px;
+  padding: 20px 0;
+}
+
+.advantages__card p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+  text-align: center;
+  color: #000000;
+}
+
+.advantages__card img {
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+/* price2 */
+
+.price2 {
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  z-index: 22;
+}
+
+.right__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -99;
+}
+
+.price2 h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+  color: #000000;
+}
+
+.price2 h3 span {
+  color: #ffbe00;
+}
+
+.price2__p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 31px;
+
+  color: #000000;
+}
+
+.price2__p::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 7px;
+  background-color: #ffc700;
+  margin: 0 auto;
+  margin-top: 31px;
+  border-radius: 3.5px;
+}
+
+.container__price2 {
+  gap: 25px;
+}
+
+.card_price2 {
+  max-width: 346px;
+  width: 100%;
+
+  box-shadow: 0px 4px 32px rgba(34, 34, 34, 0.24);
+  border-radius: 25px;
+  background: #fff;
+
+  margin-top: 40px;
+}
+
+.card_price2 img {
+  margin: 10px auto;
+  border-bottom: 1px solid #000;
+}
+
+.price2__text {
+  padding: 25px;
+}
+
+.price2__text h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 99.5%;
+
+  color: #000000;
+}
+
+.price2__text p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  display: flex;
+  text-align: left;
+  margin-top: 15px;
+
+  color: #000000;
+}
+
+.price2__text h6 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 130%;
+  margin-top: 15px;
+
+  color: #000000;
+}
+
+.price2__text a {
+  display: block;
+  background: #ffbe00;
+  border: 1px solid #ffc700;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  margin-top: 36px;
+  padding: 18px 52px;
+
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.price__uz a {
+  line-height: 20px;
+  padding: 12px 52px;
+}
+
+.price2__text a:hover {
+  text-decoration: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* work  */
+
+.reliable-hands {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.reliable-hands h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.reliable-hands h3 span {
+  color: #ffbe00;
+}
+
+.reliable-hands h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin-top: 14px;
+
+  color: #000000;
+}
+
+.reliable-hands h4::after {
+  content: "";
+  display: block;
+  width: 68px;
+  height: 7px;
+  background-color: #ffc700;
+  margin: 0 auto;
+  margin-top: 31px;
+  border-radius: 3.5px;
+}
+
+.left__inner h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 131%;
+
+  color: #000;
+}
+
+.left__inner h5 span {
+  color: #ffbe00;
+}
+
+.p__left {
+  margin-top: 18px;
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 124%;
+  padding: 15px;
+  background: rgba(217, 217, 217, 0.28);
+  border-radius: 16px;
+
+  color: #000000;
+}
+
+.cards__inner {
+  margin-top: 20px;
+}
+
+.card__inner {
+  max-width: 100px;
+  width: 100%;
+  text-align: center;
+}
+
+.card__inner img {
+  margin: 0 auto;
+}
+
+.card__inner p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 124%;
+  text-align: center;
+  margin-top: 4px;
+
+  color: #000000;
+}
+
+.carousel-item {
+  margin-top: 50px;
+}
+
+.left__inner {
+  display: inline-block;
+  margin-left: 70px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.right__inner {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.right__margin {
+  margin-left: 150px;
+}
+
+.container__hands {
+  position: relative;
+}
+
+.carousel-control-prev {
+  position: absolute;
+  top: 50%;
+  left: -50px;
+
+  background: #ffc700;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+}
+
+.carousel-control-next {
+  position: absolute;
+  top: 50%;
+  right: -50px;
+
+  background: #ffc700;
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+}
+
+/* form  */
+
+.form {
+  min-height: 850px;
+  background-image: url(img/form_bg.webp);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 100px 0;
+  position: relative;
+}
+
+.form__car {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 690px;
+}
+
+.form h2 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 48px;
+
+  color: #000000;
+}
+
+.form h2 span {
+  color: #ffc700;
+}
+
+.text_form {
+  margin-top: 35px;
+  margin-bottom: 25px;
+}
+
+.text_form p {
+  margin-left: 15px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 27px;
+
+  color: #000000;
+}
+
+.forma {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 26px;
+  background: #ffffff;
+  border-radius: 29px;
+  padding: 45px 30px 45px 55px;
+  display: flex;
+  flex-direction: column;
+}
+
+.forma input,
+.form button {
+  max-width: 384px;
+  width: 100%;
+}
+
+.forma h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 32px;
+  color: #000000;
+  text-align: center;
+}
+
+.form input,
+.form button {
+  margin-top: 30px;
+}
+
+.form input {
+  background: #ebebeb;
+  border: 3px solid #ffc700;
+  border-radius: 15px;
+  padding: 15px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 27px;
+
+  color: #8c8c8c;
+}
+
+.chek {
+  margin-top: 20px;
+}
+
+.chek_ {
+  margin-top: 7px !important;
+  width: 10% !important;
+}
+
+.chek label {
+  font-size: 18px;
+}
+
+.chek a:hover {
+  text-decoration: none;
+  color: #deb00b;
+}
+
+.form button {
+  background: #deb00b;
+  border-radius: 20px;
+
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 22px;
+  color: #ffffff;
+  padding: 20px;
+}
+
+/* work */
+
+.we-work {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  position: relative;
+}
+
+.work__right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.we-work h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 62px;
+  text-align: center;
+
+  color: #323232;
+}
+
+.container__work {
+  gap: 20px;
+}
+
+.card__work {
+  margin-top: 20px;
+  max-width: 250px;
+  width: 100%;
+  text-align: center;
+}
+
+.img__card__work {
+  margin: 0 auto;
+  width: 70px;
+  height: 70px;
+  background: #d6d6d6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img__card__work:hover {
+  background: #ffc700;
+}
+
+.img__card__work img {
+  display: block;
+}
+
+.card__work h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin-top: 15px;
+
+  color: #323232;
+}
+
+.card__work p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 27px;
+  text-align: center;
+  margin-top: 7px;
+
+  color: #323232;
+}
+
+/* о компании */
+
+.about_com {
+  margin-top: 50px;
+}
+
+.left_about {
+  max-width: 600px;
+}
+
+.left_about h3 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+
+  color: #171616;
+
+  margin-bottom: 30px;
+}
+
+.left_about p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #171616;
+}
+
+/* отзывы */
+
+.feed_back {
+  padding-bottom: 50px;
+}
+
+.feed_back h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 49px;
+  text-align: center;
+
+  color: #171616;
+
+  margin-bottom: 30px;
+}
+
+.feed__cards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 25px;
+}
+
+.feed__card {
+  max-width: 520px;
+  width: 100%;
+}
+
+video {
+  width: 100%;
+  border-radius: 20px;
+}
+
+.video_feed iframe {
+  border-radius: 20px;
+}
+
+.feed__card h5 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #171616;
+  margin-top: 17px;
+}
+
+.feed__card h5 span {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+
+  color: #ff0000;
+}
+
+.feed__card p {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #171616;
+  margin-top: 5px;
+}
+
+/* footer */
+
+.chek__label {
+  text-align: center !important;
+}
+
+.footer {
+  background: #000;
+}
+
+.footer__container {
+  display: grid;
+  padding: 0;
+  grid-template-columns: 1fr 1fr 1fr 2fr;
+}
+
+.left__footer {
+  margin-left: 30%;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  max-width: 170px;
+  width: 100%;
+}
+
+.footer__tel {
+  background: #fec52e;
+  border: 1px solid #ffc700;
+  border-radius: 9px;
+  padding: 0 24px;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 49px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.footer__tel:hover {
+  text-decoration: none;
+  color: #000;
+  box-shadow: 0px 4px 4px #fec72e8a;
+}
+
+.social {
+  margin-top: 25px;
+}
+
+.center__one {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: 20%;
+  position: relative;
+}
+
+.center__one::before {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 250px;
+  background-color: #fff;
+  position: absolute;
+  z-index: 2;
+}
+
+.center__one ul li {
+  list-style: none;
+}
+
+.center__one ul li a {
+  display: inline-block;
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  margin-top: 31px;
+
+  color: #ffffff;
+}
+
+.center__one ul li a:hover {
+  color: #fec52e;
+  text-decoration: none;
+}
+
+.center__two {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.two__top a {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #ffffff;
+}
+
+.two__top a:hover {
+  color: #ffc700;
+  text-decoration: none;
+}
+
+.uz {
+  margin-left: 10px;
+}
+
+/* .uz::before {
+  content: "";
+  display: block;
+  height: 21px;
+  width: 2px;
+  background-color: #fff;
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
+} */
+
+.uzb {
+  margin-left: 10px;
+}
+
+.email {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #fec52e;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.email:hover {
+  color: #fec52e;
+  text-decoration: none;
+}
+
+/* благодарность */
+
+.top_footer_t li {
+  list-style: none;
+  text-align: center;
+
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 22px;
+  margin-top: 20px;
+}
+
+.nav_li_footer {
+  margin-bottom: 20px;
+}
+
+.nav_li_footer a {
+  color: #000;
+}
+
+.nav_li_footer a:hover {
+  color: #ffc700;
+  text-decoration: none;
+}
+
+.tel__blag {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.tel__blag a:hover {
+  color: #000;
+}
+
+.right__footer h4 {
+  font-family: "Muller";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  text-align: center;
+
+  color: #ffffff;
+}
+
+.right__footer a {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 1.15px;
+  margin-top: 50px;
+
+  color: #ffffff;
+}
+
+.callme {
+  margin-top: 10px !important;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px !important;
+  line-height: 27px;
+  text-align: center;
+  letter-spacing: 1.15px;
+  color: #fec52e !important;
+}
+
+.right__footer a:hover {
+  text-decoration: none;
+  color: #deb00b;
+}
+
+@media (max-width: 1367px) {
+  .lang {
+    margin-left: 10%;
+  }
+
+  .header {
+    background-position: center;
+  }
+
+  .header__body h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+
+  .header__body h2 {
+    font-size: 56px;
+    line-height: 60px;
+  }
+
+  .header__body h3 {
+    font-size: 46px;
+    line-height: 48px;
+    color: #000000;
+  }
+
+  .header__body h3 span {
+    font-size: 42px;
+    line-height: 40px;
+  }
+}
+
+@media (max-width: 1300px) {
+  .header__nav__ul li a {
+    margin-left: 12px;
+  }
+
+  .form__car {
+    width: 50%;
+  }
+
+  .right__inner {
+    width: 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .social__header {
+    display: none !important;
+  }
+
+  .header {
+    background-position: center;
+  }
+
+  .container__price2 {
+    justify-content: center !important;
+  }
+
+  .form__car {
+    width: 40%;
+  }
+
+  .feed__cards {
+    justify-content: center !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .lang {
+    display: none !important;
+  }
+
+  .footer__container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .right__footer iframe {
+    width: 100vw;
+    order: 1;
+  }
+
+  .left__footer {
+    order: 2;
+  }
+
+  .center__one {
+    order: 3;
+  }
+
+  .center__two {
+    order: 4;
+  }
+
+  .left__footer {
+    margin-left: 15%;
+  }
+
+  .center__one {
+    margin-left: 15%;
+  }
+
+  .center__two {
+    margin-left: 15%;
+  }
+}
+
+@media (max-width: 992px) {
+  .header {
+    background-position: 20%;
+  }
+
+  .advantages__cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .advantages__card {
+    max-width: 210px;
+    width: 100%;
+  }
+
+  .right__inner {
+    display: none;
+  }
+
+  .form__car {
+    display: none;
+  }
+
+  .left__footer,
+  .center__one,
+  .center__two {
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 866px) {
+  .hedader__logo {
+    display: none;
+  }
+
+  .lang {
+    position: relative;
+    z-index: 99;
+    display: flex !important;
+  }
+
+  .mobile__lang {
+    margin-top: 20px;
+    display: flex !important;
+  }
+
+  .mobile__lang a {
+    color: #ffc700 !important;
+  }
+
+  /* бургер */
+
+  .mobile_burger {
+    display: block !important;
+  }
+
+  .lang a {
+    color: #ffc700;
+  }
+
+  label .menu {
+    position: absolute;
+    right: 0px;
+    top: 35px;
+    z-index: 100;
+    width: 30px;
+    height: 30px;
+    background: #efefef;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+  }
+
+  label .hamburger {
+    position: absolute;
+    top: 35px;
+    right: 25px;
+    width: 30px;
+    height: 2px;
+    background: #fec52e;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+  }
+
+  label .hamburger:after,
+  label .hamburger:before {
+    -webkit-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #fec52e;
+  }
+
+  label .hamburger:before {
+    top: -10px;
+  }
+
+  label .hamburger:after {
+    bottom: -10px;
+  }
+
+  label input {
+    display: none;
+  }
+
+  label input:checked + .menu {
+    box-shadow: 0 0 0 100vw #efefef, 0 0 0 100vh #efefef;
+    border-radius: 0;
+  }
+
+  label input:checked + .menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+
+  label input:checked + .menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+  }
+
+  label input:checked + .menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+  }
+
+  label input:checked + .menu + ul {
+    opacity: 1;
+  }
+
+  label ul {
+    list-style: none;
+    z-index: 200;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: 0.25s 0s ease-in-out;
+    transition: 0.25s 0s ease-in-out;
+    padding: 0;
+    text-align: center;
+  }
+
+  label a {
+    margin-bottom: 1em;
+    display: block;
+    color: #000;
+    text-decoration: none;
+  }
+
+  .chek__a {
+    margin-bottom: 0 !important;
+    font-size: 14px;
+    color: blue;
+  }
+
+  .right__footer {
+    margin-top: 50px;
+  }
+
+  .nav_li a {
+    font-family: "Muller";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+  }
+
+  .nav_li a:hover {
+    color: #ffc700;
+    text-decoration: none;
+  }
+
+  .ul_m {
+    height: 50vh;
+  }
+
+  .phone_m_link {
+    background: #fec52e;
+    border-radius: 25px 0px;
+
+    font-family: "Montserrat 500";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 14px 20px;
+
+    color: #ffffff;
+  }
+
+  .chek label {
+    font-size: 14px;
+  }
+
+  .phone_m_link:hover {
+    color: #fff;
+  }
+
+  .header__uz a {
+    color: #000;
+  }
+
+  .header__uz a:hover {
+    color: #ffc700;
+  }
+
+  .uz__header:before {
+    background-color: #000;
+  }
+
+  /* header  */
+
+  .social__header {
+    display: none !important;
+  }
+
+  .header__nav__ul {
+    display: none !important;
+  }
+
+  .header {
+    padding-left: 0px;
+    background-position: 10%;
+    padding-top: 35px;
+  }
+
+  .left__bg,
+  .right__bg,
+  .work__right {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .header__body h1 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .header__body h1 span {
+    font-size: 48px;
+    line-height: 50px;
+  }
+
+  .header__body h2 {
+    font-size: 38px;
+    line-height: 40px;
+  }
+
+  .header__body h2 span {
+    font-size: 36px;
+    line-height: 38px;
+  }
+
+  .header__body p {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .advantages h3,
+  .price2 h3,
+  .reliable-hands h3,
+  .form h2,
+  .we-work h4,
+  .feed_back h4 {
+    font-size: 38px;
+    line-height: 130%;
+  }
+
+  .advantages__card p,
+  .price2__p,
+  .price2__text h5,
+  .reliable-hands h4,
+  .text_form p {
+    font-size: 20px;
+    line-height: 130%;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none;
+  }
+
+  .forma {
+    max-width: 350px;
+    width: 100%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .form input {
+    padding: 10px;
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .form button {
+    font-size: 18px;
+    line-height: 20px;
+    padding: 10px;
+  }
+
+  .footer__container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left__footer,
+  .center__one,
+  .center__two {
+    margin-left: 0;
+  }
+
+  .center__one,
+  .center__two {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .left_about h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .left_about p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .lang {
+    display: none !important;
+  }
+
+  .top_m {
+    position: relative;
+    z-index: -1;
+  }
+
+  .header__body h1 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-top: 130px;
+  }
+
+  .header__body h1 span {
+    font-size: 44px;
+    line-height: 40px;
+  }
+
+  .header__body h2 {
+    font-size: 42px;
+    line-height: 38px;
+  }
+
+  .header__body h2 span {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .header__body p {
+    font-size: 18px;
+    line-height: 20px;
+  }
+
+  .advantages h3,
+  .price2 h3,
+  .reliable-hands h3,
+  .form h2,
+  .we-work h4,
+  .feed_back h4 {
+    font-size: 32px;
+    line-height: 130%;
+  }
+
+  .advantages__card p,
+  .price2__p,
+  .price2__text h5,
+  .reliable-hands h4,
+  .text_form p {
+    font-size: 18px;
+    line-height: 130%;
+  }
+
+  .left__inner {
+    margin-left: 0px;
+  }
+
+  .card_price2 img {
+    width: 80%;
+  }
+}
