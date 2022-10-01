@@ -200,6 +200,8 @@ img {
   border-radius: 7px;
   margin-top: 31px;
   padding: 18px 28px 16px 28px;
+  position: relative;
+  z-index: 99;
 }
 
 .header__body a:hover {
@@ -1277,7 +1279,7 @@ video {
     z-index: 100;
     width: 30px;
     height: 30px;
-    background: #efefef;
+    background: #fff;
     border-radius: 50% 50% 50% 50%;
     -webkit-transition: 0.5s ease-in-out;
     transition: 0.5s ease-in-out;
@@ -1565,7 +1567,7 @@ video {
   .header__body h1 {
     font-size: 28px;
     line-height: 32px;
-    margin-top: 130px;
+    margin-top: 95px;
   }
 
   .header__body h1 span {
